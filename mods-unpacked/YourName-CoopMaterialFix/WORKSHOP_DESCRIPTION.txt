@@ -1,0 +1,35 @@
+Co-op Material Fix
+
+Makes negative character material-drop modifiers PERSONAL in co-op.
+
+Fixed:
+• -50% materials dropped
+• -50% materials dropped from enemies
+
+Examples:
+Streamer + normal character:
+• Normal player keeps a normal material share
+• Streamer's penalty applies only to Streamer
+
+Fisherman + normal character:
+• Enemy drops are no longer globally reduced for the teammate
+• Fisherman's enemy-drop penalty applies only to Fisherman's own share
+• Tree/non-enemy materials are not affected by Fisherman's enemy-only penalty
+
+UI:
+Affected lines now say:
+• -50% materials dropped (only applies to you)
+• -50% materials dropped from enemies (only applies to you)
+
+Also handles:
+• 2-4 player co-op
+• merged material blobs
+• uncollected bonus materials across waves
+• Builder's uncollected-material conversion
+• 1-value pickups without rounding them permanently to zero
+
+Solo behavior is unchanged.
+
+Target: Brotato 1.1.15.4
+
+UI note: the '(only applies to you)' suffix is added only to negative material-drop effects on character descriptions, not to unrelated item effects.

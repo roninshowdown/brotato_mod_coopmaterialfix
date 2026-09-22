@@ -1,0 +1,51 @@
+LOCAL TEST INSTALL — Brotato / Steam
+
+Use this method first. Do NOT put this ZIP in a made-up Workshop folder.
+
+1. Steam -> Brotato -> Manage -> Browse local files.
+2. Completely close Brotato.
+3. EXTRACT THIS ZIP INTO THE BROTATO GAME ROOT.
+
+After extraction, this exact file must exist:
+
+Brotato/
+  mods-unpacked/
+    YourName-CoopMaterialFix/
+      manifest.json
+      mod_main.gd
+      extensions/
+        main.gd
+        singletons/
+          run_data.gd
+        items/
+          global/
+            effect.gd
+
+IMPORTANT:
+- Do NOT end up with:
+  Brotato/mods-unpacked/mods-unpacked/YourName-CoopMaterialFix/
+- Do NOT end up with:
+  Brotato/mods-unpacked/YourName-CoopMaterialFix/mods-unpacked/...
+
+4. Launch Brotato.
+5. Open Mods.
+6. The mod should appear as CoopMaterialFix.
+7. Enable it and restart Brotato.
+
+If it still does not appear:
+Open:
+%APPDATA%\Brotato\logs\modloader.log
+
+Search for:
+YourName-CoopMaterialFix
+CoopMaterialFix
+manifest
+mods-unpacked
+
+Send the relevant lines.
+
+PACKED/WORKSHOP NOTE:
+The ZIP is named using the current ModLoader convention:
+YourName-CoopMaterialFix-1.3.0.zip
+
+For local Steam development, mods-unpacked is the recommended test path.
