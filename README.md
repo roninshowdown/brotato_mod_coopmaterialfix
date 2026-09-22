@@ -53,15 +53,3 @@ makezip.py                       packages mods-unpacked/ into a distributable zi
 4. Launch Brotato -> Mods -> enable CoopMaterialFix -> restart.
 
 Logs on failure: `%APPDATA%\Brotato\logs\modloader.log`, `godot.log`.
-
-## Build
-
-```
-python makezip.py
-```
-
-Produces `YourName-CoopMaterialFix-<version>.zip` for Workshop/packaged
-distribution.
-
-Before publishing under a real name, replace `YourName` in the folder name,
-`manifest.json`, and `mod_main.gd`.
