@@ -3,7 +3,7 @@ import zipfile, os, shutil
 stage = r"C:\Users\mirco\brotato-mod-v2"
 root = os.path.join(stage, "mods-unpacked")
 out = os.path.join(stage, "HunTTer-CoopMaterialFix-1.3.1.zip")
-workshop_dir = r"C:\Spiele\Steam\steamapps\workshop\content\1942280\3358859974"
+workshop_dir = r"C:\Spiele\Steam\steamapps\workshop\content\1942280\3808621609"
 
 if os.path.exists(out):
     os.remove(out)
