@@ -1,6 +1,6 @@
 # Coop Material Fix for Brotato
 
-Version: 1.3.0  
+Version: 1.3.1  
 Target: Brotato 1.1.15.4 / ModLoader 6.x
 
 ## What v1.2 fixes
@@ -18,12 +18,17 @@ The affected CHARACTER description line is also labelled:
 - `-50% materials dropped (only applies to you)`
 - `-50% materials dropped from enemies (only applies to you)`
 
-The label is intentionally added at `Effect.get_text()`, the single shared choke
-point used by both the base game (`EffectLine._display_effect`) and other mods'
-tooltip systems (e.g. ImprovedTooltips). Only negative material-drop effects
-authored on characters are ever displayed by that system, which keeps the label
-character-only by construction; an item or third-party mod that happens to use
-a negative `gold_drops` key is not falsely labelled.
+The label is added by two hooks, because ImprovedTooltips replaces the vanilla
+description renderer entirely:
+
+- Vanilla tooltips: `EffectLine._display_effect()`, only when the effect belongs
+  to that player's character.
+- With ImprovedTooltips: `Text._wl_get_effect_line()` (ImprovedTooltips's own
+  per-effect text builder), only for `CHARACTER` origin tooltips. This hook is
+  installed only when ImprovedTooltips is loaded; ImprovedTooltips is listed as
+  an optional dependency so it always loads first.
+
+Items or third-party mods that use a negative `gold_drops` key are not labelled.
 
 ## Intended examples
 
@@ -140,6 +145,14 @@ The folder must remain `<namespace>-<name>`.
 14. Verify the two UI suffixes
 15. Check `%appdata%/Brotato/logs/modloader.log` and `godot.log`
 
+
+## v1.3.1 ImprovedTooltips label fix
+
+- "(only applies to you)" label now renders with ImprovedTooltips enabled
+  (new `extensions/singletons/text_improved_tooltips.gd`, installed only when
+  ImprovedTooltips is loaded).
+- `_wl-ImprovedTooltips` added to `optional_dependencies` to guarantee load order.
+- Removed `CMF DEBUG` log line from the vanilla label hook.
 
 ## v1.3.0 correctness update
 

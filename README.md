@@ -2,7 +2,7 @@
 
 **Negative material-drop penalties should hurt the character who has them — not your whole co-op party.**
 
-![Version](https://img.shields.io/badge/version-1.3.0-orange)
+![Version](https://img.shields.io/badge/version-1.3.1-orange)
 ![Brotato](https://img.shields.io/badge/Brotato-1.1.15.4-c9622f)
 ![ModLoader](https://img.shields.io/badge/ModLoader-6.2-blue)
 ![Status](https://img.shields.io/badge/status-working-brightgreen)
@@ -62,7 +62,7 @@ Affected character lines are annotated so the effect is never a mystery:
 | ✅ Solo | Untouched — fix is a co-op-only code path |
 | ✅ 2–4 player co-op | Fully supported |
 | ✅ Multiple affected players | Each penalty applies independently |
-| ✅ ImprovedTooltips | Chains cleanly (shared `Effect.get_text()` hook) |
+| ✅ ImprovedTooltips | Label hooks into its tooltip builder (optional dependency) |
 | ⚠️ Other `main.gd` / `run_data.gd` extenders | Load-order sensitive — see full audit below |
 
 <details>
@@ -108,17 +108,6 @@ makezip.py                          # packages mods-unpacked/ into a distributab
 4. Launch Brotato → **Mods** → enable **CoopMaterialFix** → restart
 
 🪵 Something not showing up? Check `%APPDATA%\Brotato\logs\modloader.log`.
-
-## 🔨 Build
-
-```bash
-python makezip.py
-```
-
-Outputs `YourName-CoopMaterialFix-<version>.zip`, ready for Workshop upload.
-
-> Before publishing under your own name, replace `YourName` in the folder
-> name, `manifest.json`, and `mod_main.gd`.
 
 ---
 

@@ -1,6 +1,9 @@
 extends "res://items/global/effect_line.gd"
 
-# Coop Material Fix 1.3.0
+# Coop Material Fix 1.3.1
+#
+# Not reached while ImprovedTooltips is active (it renders lines via
+# _display_special_text); see extensions/singletons/text_improved_tooltips.gd.
 #
 # The "(only applies to you)" label used to be attached by extending
 # Effect.get_text() (res://items/global/effect.gd). That was unreliable:
@@ -28,10 +31,6 @@ func _display_effect(player_index: int, _effect: Effect, colored: bool = true, a
 
 	if _effect.value < 0 and (_effect.key == "gold_drops" or _effect.key == "enemy_gold_drops"):
 		var owned := _cmf_is_owned_by_players_character(player_index, _effect)
-		ModLoaderLog.info(
-			"CMF DEBUG _display_effect key=%s value=%s player_index=%s owned=%s" % [_effect.key, _effect.value, player_index, owned],
-			"CMF"
-		)
 		if owned and is_instance_valid(text_descr):
 			text_descr.bbcode_text += CMF_ONLY_YOU_SUFFIX
 

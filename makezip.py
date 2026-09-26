@@ -2,7 +2,7 @@ import zipfile, os, shutil
 
 stage = r"C:\Users\mirco\brotato-mod-v2"
 root = os.path.join(stage, "mods-unpacked")
-out = os.path.join(stage, "YourName-CoopMaterialFix-1.3.0.zip")
+out = os.path.join(stage, "YourName-CoopMaterialFix-1.3.1.zip")
 workshop_dir = r"C:\Spiele\Steam\steamapps\workshop\content\1942280\3358859974"
 
 if os.path.exists(out):
@@ -32,4 +32,4 @@ for fn in os.listdir(workshop_dir):
         print("removed stale:", fn)
 
 shutil.copy(out, os.path.join(workshop_dir, os.path.basename(out)))
-print("deployed v1.3.0")
+print("deployed v1.3.1")
