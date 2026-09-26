@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="assets/cover.jpg" alt="Co-op Material Fix cover" width="320">
+
 # 🥔 Co-op Material Fix
 
 **Negative material-drop penalties should hurt the character who has them — not your whole co-op party.**
@@ -98,6 +100,8 @@ Affected character lines are annotated so the effect is never a mystery:
 
 > `-50% materials dropped` **(only applies to you)**
 > `-50% materials dropped from enemies` **(only applies to you)**
+
+<img src="assets/ui_label.png" alt="Explorer tooltip showing the (only applies to you) label" width="600">
 
 Works in vanilla tooltips and with [ImprovedTooltips](https://steamcommunity.com/sharedfiles/filedetails/?id=3019195689).
 

@@ -1,55 +1,53 @@
-[h1]Co-op Material Fix[/h1]
+[img]https://raw.githubusercontent.com/roninshowdown/brotato_mod_coopmaterialfix/main/assets/banner_problem.png[/img]
 
-Makes negative character material-drop modifiers [b]personal[/b] in co-op.
+💥 In vanilla Brotato co-op, a character's negative material modifier is [b]averaged across the whole party[/b] and then applied to every drop - for [b]everyone[/b].
 
-In vanilla co-op, one character's material penalty quietly shrinks the drops for the whole team. With this mod, only the player who picked that character pays for it.
+In a 2-player run with Streamer, [b]both[/b] players lose 25% of their materials. Your teammate pays for [i]your[/i] character's downside.
 
-[h2]Fixed effects[/h2]
+[img]https://raw.githubusercontent.com/roninshowdown/brotato_mod_coopmaterialfix/main/assets/banner_fix.png[/img]
+
+[code]
+🪙 material drops
+  ├─ 🧑 Player A (Streamer, -50%)  → ✅ penalty applies to A only
+  └─ 🧑 Player B (Normal)          → ✅ full, unpenalized share
+[/code]
+
 [list]
-[*]-50% materials dropped
-[*]-50% materials dropped from enemies
+[*]Enemy-only penalties never touch tree materials
+[*]Positive modifiers (Jack, Evil Hat, Starfish) stay shared as vanilla intends
+[*]Solo play is untouched
 [/list]
 
-[h2]Examples[/h2]
-[b]Streamer + normal character[/b]
+[img]https://raw.githubusercontent.com/roninshowdown/brotato_mod_coopmaterialfix/main/assets/banner_characters.png[/img]
+
+[table]
+[tr][th]Character[/th][th]Penalty[/th][th]Source[/th][/tr]
+[tr][td]🎥 Streamer[/td][td]-50% materials dropped[/td][td]Base game[/td][/tr]
+[tr][td]🌾 Farmer[/td][td]-50% materials dropped[/td][td]Base game[/td][/tr]
+[tr][td]🥾 Hiker[/td][td]-50% materials dropped[/td][td]Abyssal Terrors[/td][/tr]
+[tr][td]🎣 Fisherman[/td][td]-50% materials dropped from enemies[/td][td]Base game[/td][/tr]
+[tr][td]🧭 Explorer[/td][td]-50% materials dropped from enemies[/td][td]Base game[/td][/tr]
+[tr][td]👣 Cryptid[/td][td]-50% materials dropped from enemies[/td][td]Base game[/td][/tr]
+[tr][td]🏴‍☠️ Buccaneer[/td][td]-50% materials dropped from enemies[/td][td]Abyssal Terrors[/td][/tr]
+[/table]
+
+[img]https://raw.githubusercontent.com/roninshowdown/brotato_mod_coopmaterialfix/main/assets/banner_ui.png[/img]
+
+Affected lines are marked, so everyone knows who pays for the penalty:
+
+[img]https://raw.githubusercontent.com/roninshowdown/brotato_mod_coopmaterialfix/main/assets/ui_label.png[/img]
+
+[img]https://raw.githubusercontent.com/roninshowdown/brotato_mod_coopmaterialfix/main/assets/banner_compat.png[/img]
+
 [list]
-[*]Normal player keeps a normal material share
-[*]Streamer's penalty applies only to Streamer
+[*]✅ 2-4 player co-op, multiple affected players at once
+[*]✅ Abyssal Terrors DLC
+[*]✅ ImprovedTooltips (label shows in its tooltips too)
+[*]⚠️ Other mods changing main.gd / run_data.gd: load-order sensitive
 [/list]
 
-[b]Fisherman + normal character[/b]
-[list]
-[*]Enemy drops are no longer reduced for the teammate
-[*]Fisherman's enemy-drop penalty applies only to Fisherman's own share
-[*]Tree / non-enemy materials are not affected by Fisherman's enemy-only penalty
-[/list]
+Brotato 1.1.15.4 · ModLoader 6.2
 
-[h2]UI[/h2]
-Affected character lines now say:
-[list]
-[*]-50% materials dropped [i](only applies to you)[/i]
-[*]-50% materials dropped from enemies [i](only applies to you)[/i]
-[/list]
-Only negative material-drop effects on characters get the label, not unrelated item effects.
+[hr][/hr]
 
-[h2]Also handles[/h2]
-[list]
-[*]2-4 player co-op, multiple affected players at once
-[*]Merged material blobs
-[*]Uncollected bonus materials across waves
-[*]Builder's uncollected-material conversion
-[*]1-value pickups without rounding them down to zero
-[/list]
-
-[h2]Compatibility[/h2]
-[list]
-[*]Solo: unchanged
-[*]ImprovedTooltips: supported, label shows in its tooltips too
-[*]Other mods that change main.gd / run_data.gd: should work, load-order sensitive
-[/list]
-
-Target: Brotato 1.1.15.4, ModLoader 6.2
-
-Source & issues: [url=https://github.com/roninshowdown/brotato_mod_coopmaterialfix]GitHub[/url]
-
-Version 1.3.1
+📖 For more information, go to: [url=https://github.com/roninshowdown/brotato_mod_coopmaterialfix]GitHub[/url]
