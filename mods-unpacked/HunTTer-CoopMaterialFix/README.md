@@ -120,8 +120,8 @@ Known compatibility limitations:
 
 ## Before publishing
 
-Replace `YourName` in:
-- folder name `YourName-CoopMaterialFix`
+Replace `HunTTer` in:
+- folder name `HunTTer-CoopMaterialFix`
 - `manifest.json`
 - `mod_main.gd`
 
@@ -178,4 +178,4 @@ Uses the current ModLoader 6.2 entrypoint/API style (`_init()`,
 For local Steam testing, extract this package into the Brotato game root so this
 path exists directly:
 
-`Brotato/mods-unpacked/YourName-CoopMaterialFix/manifest.json`
+`Brotato/mods-unpacked/HunTTer-CoopMaterialFix/manifest.json`

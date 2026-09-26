@@ -1,7 +1,7 @@
 extends Node
 
-const MOD_DIR_NAME := "YourName-CoopMaterialFix"
-const LOG_NAME := "YourName-CoopMaterialFix:Main"
+const MOD_DIR_NAME := "HunTTer-CoopMaterialFix"
+const LOG_NAME := "HunTTer-CoopMaterialFix:Main"
 const IMPROVED_TOOLTIPS_ID := "_wl-ImprovedTooltips"
 
 var mod_dir_path := ""

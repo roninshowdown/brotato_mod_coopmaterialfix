@@ -10,7 +10,7 @@ After extraction, this exact file must exist:
 
 Brotato/
   mods-unpacked/
-    YourName-CoopMaterialFix/
+    HunTTer-CoopMaterialFix/
       manifest.json
       mod_main.gd
       extensions/
@@ -23,9 +23,9 @@ Brotato/
 
 IMPORTANT:
 - Do NOT end up with:
-  Brotato/mods-unpacked/mods-unpacked/YourName-CoopMaterialFix/
+  Brotato/mods-unpacked/mods-unpacked/HunTTer-CoopMaterialFix/
 - Do NOT end up with:
-  Brotato/mods-unpacked/YourName-CoopMaterialFix/mods-unpacked/...
+  Brotato/mods-unpacked/HunTTer-CoopMaterialFix/mods-unpacked/...
 
 4. Launch Brotato.
 5. Open Mods.
@@ -37,7 +37,7 @@ Open:
 %APPDATA%\Brotato\logs\modloader.log
 
 Search for:
-YourName-CoopMaterialFix
+HunTTer-CoopMaterialFix
 CoopMaterialFix
 manifest
 mods-unpacked
@@ -46,6 +46,6 @@ Send the relevant lines.
 
 PACKED/WORKSHOP NOTE:
 The ZIP is named using the current ModLoader convention:
-YourName-CoopMaterialFix-1.3.1.zip
+HunTTer-CoopMaterialFix-1.3.1.zip
 
 For local Steam development, mods-unpacked is the recommended test path.
