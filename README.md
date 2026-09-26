@@ -96,19 +96,5 @@ mods-unpacked/YourName-CoopMaterialFix/
 makezip.py                          # packages mods-unpacked/ into a distributable zip
 ```
 
-## 🚀 Install (local test)
-
-1. Steam → Brotato → Manage → **Browse local files**
-2. Close Brotato completely
-3. Copy `mods-unpacked/YourName-CoopMaterialFix/` into the Brotato game root:
-
-   ```
-   Brotato/mods-unpacked/YourName-CoopMaterialFix/manifest.json  ✅ this path must exist
-   ```
-4. Launch Brotato → **Mods** → enable **CoopMaterialFix** → restart
-
-🪵 Something not showing up? Check `%APPDATA%\Brotato\logs\modloader.log`.
-
----
 
 <sub>Target: Brotato 1.1.15.4 · ModLoader 6.2 · Godot 3.7</sub>
